@@ -1,1 +1,7 @@
 
+export CFLAGS="-std=gnu89 -Wno-implicit-function-declaration"
+export CC="gcc" # Ensure you're using gcc
+
+./configure --prefix=/usr --host=$LFS\_TGT --build=$(sh config/config.guess) --without-bash-malloc --with-installed-readline --enable-readline
+
+make && make DESTDIR=$LFS install
