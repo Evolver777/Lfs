@@ -5,3 +5,11 @@ export CC="gcc" # Ensure you're using gcc
 ./configure --prefix=/usr --host=$LFS\_TGT --build=$(sh config/config.guess) --without-bash-malloc --with-installed-readline --enable-readline
 
 make && make DESTDIR=$LFS install
+
+
+
+#above one shouldnt work, due to gcc15 , just install gcc13 and try
+
+
+    # Example using yay (if installed)
+    yay -S gcc13
